@@ -1,0 +1,10 @@
+usr/include/*
+#usr/lib/*/lib*.a
+usr/lib/*/lib*.so
+usr/lib/*/pkgconfig/atf-c*
+usr/share/man/*/atf-test-program.1
+usr/share/man/*/*.3
+usr/share/man/*/*.4
+usr/share/man/*/*.7
+usr/share/aclocal/atf-c*.m4
+#usr/tests/*

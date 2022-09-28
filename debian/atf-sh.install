@@ -1,0 +1,7 @@
+usr/libexec/atf-check
+usr/share/atf/*
+usr/share/man/*/atf-check.1
+usr/share/man/*/atf-sh.1
+usr/lib/*/pkgconfig/atf-sh.pc
+usr/share/aclocal/atf-sh.m4
+usr/bin/atf-sh

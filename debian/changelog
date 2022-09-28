@@ -1,0 +1,44 @@
+atf (0.21-6) unstable; urgency=medium
+
+  * Re-enable kyua on all architectures now that Hurd is ready.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Wed, 18 Nov 2020 19:14:30 +0100
+
+atf (0.21-5) unstable; urgency=medium
+
+  * Don’t include <sys/mount.h> missing on Hurd.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Wed, 18 Nov 2020 15:09:11 +0100
+
+atf (0.21-4) unstable; urgency=medium
+
+  * Temporarily limit kyua to amd64 only.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Wed, 18 Nov 2020 13:53:15 +0100
+
+atf (0.21-3) unstable; urgency=medium
+
+  * Use kyua when available.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Wed, 04 Nov 2020 11:59:43 +0100
+
+atf (0.21-2) unstable; urgency=medium
+
+  [ Andrej Shadura ]
+  * Don’t ship static libraries.
+  * Add debian/not-installed.
+  * Bump Standards-Version to 4.5.0.
+  * Set Rules-Requires-Root: no.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Nicolas Braud-Santoni ]
+  * Do not install ATF's own testsuite.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Fri, 30 Oct 2020 18:59:52 +0100
+
+atf (0.21-1) unstable; urgency=medium
+
+  * Initial release (Closes: #766576).
+
+ -- Andrej Shadura <andrewsh@debian.org>  Fri, 20 Dec 2019 14:54:18 +0100

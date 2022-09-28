@@ -1,0 +1,29 @@
+From 5ee01650062e69981a763fd761487346b6620e7e Mon Sep 17 00:00:00 2001
+From: Julio Merino <jmmv@google.com>
+Date: Sun, 10 Mar 2019 09:14:15 +0100
+Subject: [PATCH] Catch polymorphic exception by reference
+
+Fixes a compilation warning with gcc 8.
+
+Same as requested in https://github.com/jmmv/atf/pull/41 but I added a
+missing const qualifier.
+---
+ atf-sh/atf-check.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/atf-sh/atf-check.cpp b/atf-sh/atf-check.cpp
+index 866b7bb..0f59bb1 100644
+--- a/atf-sh/atf-check.cpp
++++ b/atf-sh/atf-check.cpp
+@@ -216,7 +216,7 @@ parse_signal(const std::string& str)
+     if (signo == INT_MIN) {
+         try {
+             return atf::text::to_type< int >(str);
+-        } catch (std::runtime_error) {
++        } catch (const std::runtime_error&) {
+             throw atf::application::usage_error("Invalid signal name or number "
+                 "in -s option");
+         }
+-- 
+2.20.1
+

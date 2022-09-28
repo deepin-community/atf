@@ -1,0 +1,72 @@
+Source: atf
+Priority: optional
+Maintainer: Andrej Shadura <andrewsh@debian.org>
+Build-Depends:
+ debhelper-compat (= 12),
+ kyua <!nocheck>
+Standards-Version: 4.5.0
+Section: libs
+Rules-Requires-Root: no
+Homepage: https://github.com/jmmv/atf
+Vcs-Git: https://salsa.debian.org/debian/atf.git
+Vcs-Browser: https://salsa.debian.org/debian/atf
+
+Package: atf-sh
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Automated Test Framework (shell library)
+ The Automated Testing Framework (ATF) is a collection of libraries
+ to implement test programs in a variety of languages.
+ .
+ ATF libraries provide an API for writing test programs.
+ The test programs can be written in C, C++, or POSIX shell.
+ ATF based test programs can be run manually, or via automation.
+ .
+ Kyua is the preferred execution engine for ATF test programs.
+ .
+ This package ships the atf-sh tool and the corresponding shell
+ library
+
+Package: libatf-c-1
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Automated Test Framework (shared C++ library)
+ The Automated Testing Framework (ATF) is a collection of libraries
+ to implement test programs in a variety of languages.
+ .
+ ATF libraries provide an API for writing test programs.
+ The test programs can be written in C, C++, or POSIX shell.
+ ATF based test programs can be run manually, or via automation.
+ .
+ Kyua is the preferred execution engine for ATF test programs.
+ .
+ This package ships the shared C++ library for ATF.
+
+Package: libatf-c++-2
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Automated Test Framework (shared C library)
+ The Automated Testing Framework (ATF) is a collection of libraries
+ to implement test programs in a variety of languages.
+ .
+ ATF libraries provide an API for writing test programs.
+ The test programs can be written in C, C++, or POSIX shell.
+ ATF based test programs can be run manually, or via automation.
+ .
+ Kyua is the preferred execution engine for ATF test programs.
+ .
+ This package ships the shared C library for ATF.
+
+Package: libatf-dev
+Section: libdevel
+Architecture: any
+Depends: libatf-c-1 (= ${binary:Version}), libatf-c++-2 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: Automated Test Framework (development files)
+ The Automated Testing Framework (ATF) is a collection of libraries
+ to implement test programs in a variety of languages.
+ .
+ The test programs can be written in C, C++, or POSIX shell.
+ .
+ Kyua is the preferred execution engine for ATF test programs.
+ .
+ This package ships files required for developing test programs.

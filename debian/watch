@@ -1,0 +1,3 @@
+version=4
+
+https://github.com/jmmv/atf/releases .*/download/@PACKAGE@[^/]*/@PACKAGE@@ANY_VERSION@@ARCHIVE_EXT@

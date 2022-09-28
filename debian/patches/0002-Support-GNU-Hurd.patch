@@ -1,0 +1,28 @@
+This header is missing on Hurd but doesn’t seem to be used anyway.
+
+diff --git a/atf-c++/detail/fs.cpp b/atf-c++/detail/fs.cpp
+index bcef920..fe581e1 100644
+--- a/atf-c++/detail/fs.cpp
++++ b/atf-c++/detail/fs.cpp
+@@ -32,7 +32,7 @@
+ extern "C" {
+ #include <sys/param.h>
+ #include <sys/types.h>
+-#include <sys/mount.h>
++//#include <sys/mount.h>
+ #include <sys/stat.h>
+ #include <sys/wait.h>
+ #include <dirent.h>
+diff --git a/atf-c/detail/fs.c b/atf-c/detail/fs.c
+index 5ff7648..f20150d 100644
+--- a/atf-c/detail/fs.c
++++ b/atf-c/detail/fs.c
+@@ -31,7 +31,7 @@
+ 
+ #include <sys/types.h>
+ #include <sys/param.h>
+-#include <sys/mount.h>
++//#include <sys/mount.h>
+ #include <sys/stat.h>
+ #include <sys/wait.h>
+ 
