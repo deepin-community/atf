@@ -1,3 +1,9 @@
+atf (0.21-6deepin0) unstable; urgency=medium
+
+  * No source change upload against GCC 12.
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Thu, 19 Sep 2024 22:42:21 +0800
+
 atf (0.21-6) unstable; urgency=medium
 
   * Re-enable kyua on all architectures now that Hurd is ready.
